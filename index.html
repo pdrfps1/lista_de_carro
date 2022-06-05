@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Lista de Carros</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -25,35 +27,57 @@
             <div class="tabela">
                 <div class="cadastrar">
                     <button type="button" id="cadastrarCarro">Cadastrar Carro</button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form action="script.js" method="post">
+                                <label for="modelo">Modelo</label>
+                                <input type="text" name="modelo" id="modelo">
+                                <label for="ano">Ano</label>
+                                <input type="text" name="ano" id="ano">
+                                <label for="placa">Placa</label>
+                                <input type="text" name="placa" id="placa">
+                                <label for="proprietario">Proprietario</label>
+                                <input type="text" name="proprietario" id="proprietario">
+                            </form>
+                            <div class="modal-footer">
+                                <button type="submit" name="enviar" class="modal-btn">Enviar</button>
+                                <button type="button" id="limpar" class="modal-btn">Limpar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <table class="records" id="table-cars">
-                    <thead>
-                        <tr>
-                            <th>Carros</th>
-                            <th>Marcas</th>
-                            <th>Ano</td>
-                            <th>Proprietario</th>
-                            <th>Motor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <td>Fox</td>
-                            <td>Volkswagen</td>
-                            <td>2010</td>
-                            <td>Rafael</td>
-                            <td>1.0</td>
-                        <tr>
-                            <td>CLA20</td>
-                            <td>Mercedes</td>
-                            <td>2018</td>
-                            <td>Pedro</td>
-                            <td>2.0</td>
-                        </tr>
-                    </tbody>        
-                </table>
-
             </div>
+            <table class="records" id="table-cars">
+                <thead>
+                    <tr>
+                        <th>Carros</th>
+                        <th>Marcas</th>
+                        <th>Ano</td>
+                        <th>Proprietario</th>
+                        <th>Motor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fox</td>
+                        <td>Volkswagen</td>
+                        <td>2010</td>
+                        <td>Rafael</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>CLA20</td>
+                        <td>Mercedes</td>
+                        <td>2018</td>
+                        <td>Pedro</td>
+                        <td>2.0</td>
+                    </tr> 
+                </tbody>
+            </table>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
